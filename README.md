@@ -14,6 +14,6 @@ This is a mock SaaS website to showcase how Heap can be utilized to capture user
 /public/contact.html
 /public/pricing.html
 /public/signup.html
-/public/singin.html
+/public/singin.html 
 
 The true React portion of this website (the sandbox with associated interactive components) is served as a React app.  The Heap App call uses an environment variable set in .env file in the /public folder.  The call itself resides within public/index.html.  The main React app itself is located under src/App.js..
