@@ -593,6 +593,13 @@
                     " onClick="submitButton()" />
                                 <script>
                                     function submitButton() {
+                                        var emailAddress = document.getElementById("signUpEmailField").value;
+                                        if (emailAddress.indexOf('@') === -1) {
+                                            console.log("no @ in email address");
+                                        } else {
+                                            //replace with Identify call
+                                            console.log("@ in email address, Heap Identify Call to be placed here");
+                                        }
                                         window.location.href = "/";
                                     }
                                 </script>

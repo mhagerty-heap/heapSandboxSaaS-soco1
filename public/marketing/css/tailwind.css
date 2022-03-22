@@ -1132,7 +1132,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .bg-primary{
   --tw-bg-opacity: 1;
-  background-color: rgb(48 86 211 / var(--tw-bg-opacity));
+  /* background-color: rgb(48 86 211 / var(--tw-bg-opacity)); */
+  /* Changed background to Heap Purple */
+  /* background-color: rgb(92 14 140 / var(--tw-bg-opacity)); */
+  background-color: rgb(55 15 81 / var(--tw-bg-opacity));
+
+
 }
 
 .bg-\[\#f5f8ff\]{
