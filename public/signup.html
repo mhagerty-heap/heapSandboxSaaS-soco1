@@ -411,7 +411,7 @@
                                 <img src="images/marketing/logo/logo.svg" alt="logo" />
                             </a>
                         </div>
-                        <form action="/">
+                        <form action="javascript:void(0);">
                             <div class="mb-6">
                                 <input type="text" id="signUpNameField" placeholder="Name" class="
                       w-full
@@ -515,7 +515,7 @@
                     " />
                             </div>
 
-                            <div>
+                            <div class="mb-6">
                                 <input type="radio" id="freePlanRadioSelection" name="plan" value="Free">
                                 <label for="freePlanRadioSelection">Free</label><br><br>
                                 <input type="radio" id="proPlanRadioSelection" name="plan" value="Pro">
@@ -590,7 +590,12 @@
                       transition
                       duration-300
                       ease-in-out
-                    " />
+                    " onClick="submitButton()" />
+                                <script>
+                                    function submitButton() {
+                                        window.location.href = "/";
+                                    }
+                                </script>
                             </div>
                         </form>
                         <p class="text-base mb-6 text-[#adadad]">Connect With</p>
