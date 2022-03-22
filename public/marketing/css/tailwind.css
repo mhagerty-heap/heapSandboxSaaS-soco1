@@ -1222,16 +1222,23 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .from-primary{
-  --tw-gradient-from: #3056D3;
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(48 86 211 / 0));
+  /* --tw-gradient-from: #3056D3; */
+  --tw-gradient-from: #370f51;
+  /* --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(48 86 211 / 0)); */
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(195 155 222 / 0));
 }
 
 .to-transparent{
   --tw-gradient-to: transparent;
 }
 
-.to-\[\#179BEE\]{
+/* .to-\[\#179BEE\]{
   --tw-gradient-to: #179BEE;
+} */
+
+/* For image in middle of page, changed to a more purple Heap color */
+.to-\[\#179BEE\]{
+  --tw-gradient-to: #c39bde;
 }
 
 .fill-current{
