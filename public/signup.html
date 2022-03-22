@@ -411,9 +411,9 @@
                                 <img src="images/marketing/logo/logo.svg" alt="logo" />
                             </a>
                         </div>
-                        <form action="index.html">
+                        <form action="/">
                             <div class="mb-6">
-                                <input type="text" placeholder="Name" class="
+                                <input type="text" id="signUpNameField" placeholder="Name" class="
                       w-full
                       rounded-md
                       border
@@ -430,7 +430,7 @@
                     " />
                             </div>
                             <div class="mb-6">
-                                <input type="email" placeholder="Email" class="
+                                <input type="email" id="signUpEmailField" placeholder="Email" class="
                       w-full
                       rounded-md
                       border
@@ -447,7 +447,7 @@
                     " />
                             </div>
                             <div class="mb-6">
-                                <input type="password" placeholder="Password" class="
+                                <input type="password" id="signUpPasswordField" placeholder="Password" class="
                       w-full
                       rounded-md
                       border
@@ -464,7 +464,7 @@
                     " />
                             </div>
                             <div class="mb-6">
-                                <input type="text" placeholder="Street Address" class="
+                                <input type="text" id="signUpStreetAddressField" placeholder="Street Address" class="
                       w-full
                       rounded-md
                       border
@@ -481,7 +481,7 @@
                     " />
                             </div>
                             <div class="mb-6">
-                                <input type="text" placeholder="Zip Code" class="
+                                <input type="text" id="signUpZipCodeField" placeholder="Zip Code" class="
                       w-full
                       rounded-md
                       border
@@ -498,7 +498,7 @@
                     " />
                             </div>
                             <div class="mb-6">
-                                <input type="text" placeholder="Mobile Number ex: (123) 123-1234" class="
+                                <input type="text" id="signUpMobileNumberField" placeholder="Mobile Number ex: (123) 123-1234" class="
                       w-full
                       rounded-md
                       border
@@ -516,22 +516,16 @@
                             </div>
 
                             <div>
-                                <input type="radio" id="html" name="plan" value="Free">
-                                <label for="html">Free</label><br><br>
-                                <input type="radio" id="css" name="plan" value="Pro">
-                                <label for="css">Pro</label><br><br>
-                                <input type="radio" id="javascript" name="plan" value="Enterprise">
-                                <label for="javascript">Enterprise</label><br><br>
+                                <input type="radio" id="freePlanRadioSelection" name="plan" value="Free">
+                                <label for="freePlanRadioSelection">Free</label><br><br>
+                                <input type="radio" id="proPlanRadioSelection" name="plan" value="Pro">
+                                <label for="proPlanRadioSelection">Pro</label><br><br>
+                                <input type="radio" id="enterprisePlanRadioSelection" name="plan" value="Enterprise">
+                                <label for="enterprisePlanRadioSelection">Enterprise</label><br><br>
                             </div>
 
-
-
-
-
-
-
                             <div class="mb-6">
-                                <input type="text" placeholder="Credit Card ex: XXXX-XXXX-XXXX-XXXX" class="
+                                <input type="text" id="creditCardNumberField" placeholder="Credit Card ex: XXXX-XXXX-XXXX-XXXX" class="
                       w-full
                       rounded-md
                       border
@@ -548,7 +542,7 @@
                     " />
                             </div>
                             <div class="mb-6">
-                                <input type="text" placeholder="Credit Card Expiration ex: 4/26" class="
+                                <input type="text" id="creditCardExpirationField" placeholder="Credit Card Expiration ex: 4/26" class="
                       w-full
                       rounded-md
                       border
@@ -565,7 +559,7 @@
                     " />
                             </div>
                             <div class="mb-6">
-                                <input type="text" placeholder="Credit Card Code ex: 1234" class="
+                                <input type="text" id="creditCardCodeField" placeholder="Credit Card Code ex: 1234" class="
                       w-full
                       rounded-md
                       border
