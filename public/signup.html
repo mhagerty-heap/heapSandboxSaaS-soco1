@@ -411,7 +411,7 @@
                                 <img src="images/marketing/logo/logo.svg" alt="logo" />
                             </a>
                         </div>
-                        <form action="javascript:void(0);">
+                        <form id="signUpForm" name="signUpForm" action="javascript:void(0);">
                             <div class="mb-6">
                                 <input type="text" id="signUpNameField" placeholder="Name" class="
                       w-full
@@ -516,13 +516,34 @@
                             </div>
 
                             <div class="mb-6">
-                                <input type="radio" id="freePlanRadioSelection" name="plan" value="Free">
-                                <label for="freePlanRadioSelection">Free</label><br><br>
-                                <input type="radio" id="proPlanRadioSelection" name="plan" value="Pro">
-                                <label for="proPlanRadioSelection">Pro</label><br><br>
-                                <input type="radio" id="enterprisePlanRadioSelection" name="plan" value="Enterprise">
-                                <label for="enterprisePlanRadioSelection">Enterprise</label><br><br>
+                                <input type="radio" name="plan" id="freePlanRadioSelection" value="free">
+                                <label for="freePlanRadioSelection">Free ($00.00 per month)</label><br><br>
+                                <input type="radio" name="plan" id="proPlanRadioSelection" value="pro">
+                                <label for="proPlanRadioSelection">Pro ($19.99 per month)</label><br><br>
+                                <input type="radio" name="plan" id="enterprisePlanRadioSelection" value="enterprise">
+                                <label for="enterprisePlanRadioSelection">Enterprise ($70.99 per month)</label><br><br>
                             </div>
+
+                            <script>
+                                function getParameterByName(name, url = window.location.href) {
+                                    name = name.replace(/[\[\]]/g, '\\$&');
+                                    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+                                        results = regex.exec(url);
+                                    if (!results) return null;
+                                    if (!results[2]) return '';
+                                    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+                                }
+                                var planValue = getParameterByName('plan'); // grab plan from URL query string
+                                //document.forms.signUpForm.elements.plan.value="pro" // example code to set plan value, for reference
+
+                                if (planValue == "free") {
+                                    document.forms.signUpForm.elements.plan.value="free";
+                                } else if (planValue == "pro") {
+                                    document.forms.signUpForm.elements.plan.value="pro";
+                                } else if (planValue == "enterprise") {
+                                    document.forms.signUpForm.elements.plan.value="enterprise";
+                                }
+                            </script>
 
                             <div class="mb-6">
                                 <input type="text" id="creditCardNumberField" placeholder="Credit Card ex: XXXX-XXXX-XXXX-XXXX" class="
