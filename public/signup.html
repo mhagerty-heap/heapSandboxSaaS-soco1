@@ -479,7 +479,7 @@
                                 <img src="images/marketing/logo/logo.svg" alt="logo" />
                             </a>
                         </div>
-                        <form id="signUpForm" name="signUpForm" action="javascript:void(0);">
+                        <form id="signUpForm" name="signUpForm" action="javascript:submitButton();">
                             <div class="mb-6">
                                 <input type="text" id="signUpNameField" placeholder="Name" class="
                       w-full
@@ -584,11 +584,11 @@
                             </div>
 
                             <div class="mb-6">
-                                <input type="radio" name="plan" id="freePlanRadioSelection" value="free">
+                                <input type="radio" name="plan" id="freePlanRadioSelection" value="Free">
                                 <label for="freePlanRadioSelection">Free ($00.00 per month)</label><br><br>
-                                <input type="radio" name="plan" id="proPlanRadioSelection" value="pro">
+                                <input type="radio" name="plan" id="proPlanRadioSelection" value="Pro">
                                 <label for="proPlanRadioSelection">Pro ($19.99 per month)</label><br><br>
-                                <input type="radio" name="plan" id="enterprisePlanRadioSelection" value="enterprise">
+                                <input type="radio" name="plan" id="enterprisePlanRadioSelection" value="Enterprise">
                                 <label for="enterprisePlanRadioSelection">Enterprise ($70.99 per month)</label><br><br>
                             </div>
 
@@ -679,18 +679,33 @@
                       transition
                       duration-300
                       ease-in-out
-                    " onClick="submitButton()" />
+                    " />
                                 <script>
-                                    function submitButton() {
-                                        var emailAddress = document.getElementById("signUpEmailField").value;
-                                        if (emailAddress.indexOf('@') === -1) {
-                                            console.log("no @ in email address");
-                                        } else {
-                                            //replace with Identify call
-                                            console.log("@ in email address, Heap Identify Call to be placed here");
-                                        }
+                                function submitButton() {
+                                    var currentdate = new Date();
+                                    var currentLoginTime = currentdate.getDay() + "/" + currentdate.getMonth()  +  "/" + currentdate.getFullYear() + " @ " + currentdate.getHours() + ":" + currentdate.getMinutes() + ":" + currentdate.getSeconds();
+                                    var emailAddress = document.getElementById("signUpEmailField").value;
+                                    var streetAddress = document.getElementById("signUpStreetAddressField").value;
+                                    var zipCode = document.getElementById("signUpZipCodeField").value;
+                                    var planSelected = document.forms.signUpForm.elements.plan.value;
+                                    var customerName = document.getElementById("signUpNameField").value;
+
+                                    if (emailAddress.indexOf('@') === -1) {
+                                        console.log("no @ in email address");
+                                    } else {
+                                        //replace with Identify call
+                                        console.log("@ in email address, Heap Identify Call made");
+                                        heap.identify(emailAddress);
+                                        heap.addUserProperties({ "Account, Customer Name": customerName });
+                                        heap.addUserProperties({ "Account, Email Address": emailAddress });
+                                        heap.addUserProperties({ "Account, Last Login": currentLoginTime });
+                                        heap.addUserProperties({ "Account, Street Address": streetAddress });
+                                        heap.addUserProperties({ "Account, Zip Code": zipCode });
+                                        heap.addUserProperties({ "Account, Subscribed Plan": planSelected });
                                         window.location.href = "/";
                                     }
+                                    // window.location.href = "/";
+                                }
                                 </script>
                             </div>
                         </form>
