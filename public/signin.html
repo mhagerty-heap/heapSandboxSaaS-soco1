@@ -540,12 +540,13 @@
                                         } else {
                                             //replace with Identify call
                                             console.log("@ in email address, Heap Identify Call made");
-                                            heap.identify(emailAddress);
-                                            heap.addUserProperties({ "Account, Email Address": emailAddress });
-                                            heap.addUserProperties({ "Account, Last Login": currentLoginTime });
-                                            window.location.href = "/";
+                                            if (emailAddress != ''){
+                                              heap.identify(emailAddress);
+                                              heap.addUserProperties({ "Account, Email Address": emailAddress });
+                                              heap.addUserProperties({ "Account, Last Login": currentLoginTime });
+                                            }
                                         }
-                                        // window.location.href = "/";
+                                        window.location.href = "/";
                                     }
                                 </script>
                             </div>
