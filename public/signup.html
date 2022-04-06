@@ -698,22 +698,22 @@
                                         if (emailAddress != ''){
                                           heap.identify(emailAddress);
                                           if (customerName != ''){
-                                            heap.addUserProperties({ "Account, Customer Name": customerName });
+                                            heap.addUserProperties({ "Account - Customer Name": customerName });
                                           }
+                                          // if (emailAddress != ''){
+                                          //   heap.addUserProperties({ "Account- Email Address": emailAddress });
+                                          // }
                                           if (emailAddress != ''){
-                                            heap.addUserProperties({ "Account, Email Address": emailAddress });
+                                            heap.addUserProperties({ "Account - Last Login": currentLoginTime });
                                           }
-                                          if (emailAddress != ''){
-                                            heap.addUserProperties({ "Account, Last Login": currentLoginTime });
-                                          }
-                                          if (streetAddress != ''){
-                                            heap.addUserProperties({ "Account, Street Address": streetAddress });
-                                          }
-                                          if (zipCode != ''){
-                                            heap.addUserProperties({ "Account, Zip Code": zipCode });
-                                          }
+                                          // if (streetAddress != ''){
+                                          //   heap.addUserProperties({ "Account - Street Address": streetAddress });
+                                          // }
+                                          // if (zipCode != ''){
+                                          //   heap.addUserProperties({ "Account - Zip Code": zipCode });
+                                          // }
                                           if (planSelected != ''){
-                                            heap.addUserProperties({ "Account, Subscribed Plan": planSelected });
+                                            heap.addUserProperties({ "Account - Subscribed Plan": planSelected });
                                           }
                                         }
                                         window.location.href = "/";
