@@ -706,6 +706,9 @@
                                           if (emailAddress != ''){
                                             heap.addUserProperties({ "Account - Last Login": currentLoginTime });
                                           }
+                                          if (emailAddress != ''){
+                                            heap.addUserProperties({ "Account - Subscription Date": currentLoginTime });
+                                          }
                                           // if (streetAddress != ''){
                                           //   heap.addUserProperties({ "Account - Street Address": streetAddress });
                                           // }
