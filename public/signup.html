@@ -590,6 +590,8 @@
                                 <label for="proPlanRadioSelection">Pro ($19.99 per month)</label><br><br>
                                 <input type="radio" name="plan" id="enterprisePlanRadioSelection" value="Enterprise">
                                 <label for="enterprisePlanRadioSelection">Enterprise ($70.99 per month)</label><br><br>
+                                <input type="radio" name="plan" id="upgradePlanRadioSelection" value="Upgrade">
+                                <label for="upgradePlanRadioSelection">Upgrade ($10.00 per month)</label><br><br>
                             </div>
 
                             <script>
@@ -610,6 +612,8 @@
                                     document.forms.signUpForm.elements.plan.value="Pro";
                                 } else if (planValue == "enterprise") {
                                     document.forms.signUpForm.elements.plan.value="Enterprise";
+                                } else if (planValue == "upgrade") {
+                                    document.forms.signUpForm.elements.plan.value="Upgrade";
                                 }
                             </script>
 
