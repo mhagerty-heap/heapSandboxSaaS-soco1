@@ -45,6 +45,10 @@ import './assets/demo/Demos.scss';
 import './assets/layout/layout.scss';
 import './App.scss';
 
+// Install LogRocket in React App
+import LogRocket from 'logrocket';
+LogRocket.init('pzl3hi/demo-3hfzl');
+
 const App = () => {
     const [layoutMode, setLayoutMode] = useState('static');
     const [layoutColorMode, setLayoutColorMode] = useState('light')
