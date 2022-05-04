@@ -2637,7 +2637,17 @@
               data-wow-delay=".1s
               "
             >
-              <button class="faq-btn flex items-center w-full text-left">
+              <button class="faq-btn flex items-center w-full text-left" onclick="showAnswerOne();">
+                <script>
+                function showAnswerOne() {
+                  element=document.getElementById("answerOne");
+                  if (element.classList.contains("hidden") == false) {
+                    element.classList.add("hidden");
+                  } else {
+                    element.classList.remove("hidden");
+                  }
+                }
+                </script>
                 <div
                   class="
                     w-full
@@ -2672,7 +2682,7 @@
                   </h4>
                 </div>
               </button>
-              <div class="faq-content pl-[62px] hidden">
+              <div class="faq-content pl-[62px] hidden" id="answerOne">
                 <p class="text-base text-body-color leading-relaxed py-3">
                   It's easy!  Just use the Table feature.
                 </p>
@@ -2694,7 +2704,17 @@
               data-wow-delay=".15s
               "
             >
-              <button class="faq-btn flex items-center w-full text-left">
+              <button class="faq-btn flex items-center w-full text-left" onclick="showAnswerTwo();">
+                <script>
+                function showAnswerTwo() {
+                  element=document.getElementById("answerTwo");
+                  if (element.classList.contains("hidden") == false) {
+                    element.classList.add("hidden");
+                  } else {
+                    element.classList.remove("hidden");
+                  }
+                }
+                </script>
                 <div
                   class="
                     w-full
@@ -2729,7 +2749,7 @@
                   </h4>
                 </div>
               </button>
-              <div class="faq-content pl-[62px] hidden">
+              <div class="faq-content pl-[62px] hidden" id="answerTwo">
                 <p class="text-base text-body-color leading-relaxed py-3">
                   Yes, there's a built-in CRUD component.
                 </p>
@@ -2751,7 +2771,17 @@
               data-wow-delay=".2s
               "
             >
-              <button class="faq-btn flex items-center w-full text-left">
+              <button class="faq-btn flex items-center w-full text-left" onclick="showAnswerThree();">
+                <script>
+                function showAnswerThree() {
+                  element=document.getElementById("answerThree");
+                  if (element.classList.contains("hidden") == false) {
+                    element.classList.add("hidden");
+                  } else {
+                    element.classList.remove("hidden");
+                  }
+                }
+                </script>
                 <div
                   class="
                     w-full
@@ -2786,7 +2816,7 @@
                   </h4>
                 </div>
               </button>
-              <div class="faq-content pl-[62px] hidden">
+              <div class="faq-content pl-[62px] hidden" id="answerThree">
                 <p class="text-base text-body-color leading-relaxed py-3">
                   Sure!  There's a built in menu component!
                 </p>
@@ -2810,7 +2840,17 @@
               data-wow-delay=".1s
               "
             >
-              <button class="faq-btn flex items-center w-full text-left">
+              <button class="faq-btn flex items-center w-full text-left" onclick="showAnswerFour();">
+                <script>
+                function showAnswerFour() {
+                  element=document.getElementById("answerFour");
+                  if (element.classList.contains("hidden") == false) {
+                    element.classList.add("hidden");
+                  } else {
+                    element.classList.remove("hidden");
+                  }
+                }
+                </script>
                 <div
                   class="
                     w-full
@@ -2845,7 +2885,7 @@
                   </h4>
                 </div>
               </button>
-              <div class="faq-content pl-[62px] hidden">
+              <div class="faq-content pl-[62px] hidden" id="answerFour">
                 <p class="text-base text-body-color leading-relaxed py-3">
                   You sure can!  There's a built-in File component!
                 </p>
@@ -2867,7 +2907,17 @@
               data-wow-delay=".15s
               "
             >
-              <button class="faq-btn flex items-center w-full text-left">
+              <button class="faq-btn flex items-center w-full text-left" onclick="showAnswerFive();">
+                <script>
+                function showAnswerFive() {
+                  element=document.getElementById("answerFive");
+                  if (element.classList.contains("hidden") == false) {
+                    element.classList.add("hidden");
+                  } else {
+                    element.classList.remove("hidden");
+                  }
+                }
+                </script>
                 <div
                   class="
                     w-full
@@ -2902,7 +2952,7 @@
                   </h4>
                 </div>
               </button>
-              <div class="faq-content pl-[62px] hidden">
+              <div class="faq-content pl-[62px] hidden" id="answerFive">
                 <p class="text-base text-body-color leading-relaxed py-3">
                   The number of users and the length of Support.
                 </p>
@@ -2924,7 +2974,17 @@
               data-wow-delay=".2s
               "
             >
-              <button class="faq-btn flex items-center w-full text-left">
+              <button class="faq-btn flex items-center w-full text-left" onclick="showAnswerSix();">
+                <script>
+                function showAnswerSix() {
+                  element=document.getElementById("answerSix");
+                  if (element.classList.contains("hidden") == false) {
+                    element.classList.add("hidden");
+                  } else {
+                    element.classList.remove("hidden");
+                  }
+                }
+                </script>
                 <div
                   class="
                     w-full
@@ -2959,7 +3019,7 @@
                   </h4>
                 </div>
               </button>
-              <div class="faq-content pl-[62px] hidden">
+              <div class="faq-content pl-[62px] hidden" id="answerSix">
                 <p class="text-base text-body-color leading-relaxed py-3">
                   Sure!  That's the intention...you can add as many tiers as you'd like.
                 </p>
