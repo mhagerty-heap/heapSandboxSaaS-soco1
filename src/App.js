@@ -47,7 +47,7 @@ import './App.scss';
 
 // Install LogRocket in React App
 import LogRocket from 'logrocket';
-LogRocket.init('pzl3hi/demo-3hfzl');
+LogRocket.init('tcit6r/play-saas');
 
 const App = () => {
     const [layoutMode, setLayoutMode] = useState('static');
